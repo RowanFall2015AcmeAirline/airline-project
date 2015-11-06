@@ -12,10 +12,13 @@ import java.util.Map;
 public abstract class Plane {
 	protected int rows, columns;
 	protected Map seats;
+	protected boolean hasFirstClass;
 	
-	public Plane(int rows, int columns) {
+	
+	public Plane(int rows, int columns, boolean hasFirstClass) {
 		this.rows = rows;
 		this.columns = columns;
+		this.hasFirstClass = hasFirstClass;
 		
 		seats = instantiateMap(rows, columns);
 	}
@@ -26,7 +29,7 @@ public abstract class Plane {
 	 * @param numberOfSeats
 	 * @return newSeats
 	 */
-	private Map instantiateMap(Integer numberOfRows, Integer numberOfColumns) {
+	private Map<SeatNumber, Seat> instantiateMap(Integer numberOfRows, Integer numberOfColumns) {
 		HashMap<SeatNumber, Seat> newSeats = new HashMap<SeatNumber, Seat>();
 		SeatNumber currentSeatNumber;
 		Seat currentSeat;
@@ -59,4 +62,5 @@ public abstract class Plane {
 		
 		return newSeats;
 	}
+	
 }

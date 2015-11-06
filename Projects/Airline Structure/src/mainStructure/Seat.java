@@ -7,5 +7,8 @@ public class Seat {
 	public Seat(SeatNumber number, Boolean firstClass){
 		this.number = number;
 		this.firstClass = firstClass;
+		
 	}
+	
+
 }

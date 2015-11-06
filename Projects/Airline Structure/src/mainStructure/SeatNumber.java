@@ -14,7 +14,7 @@ public class SeatNumber {
 	 * @param number
 	 */
 	public SeatNumber(String number) {
-		this.number = new String("number");
+		this.number = new String(number);
 	}
 	
 }

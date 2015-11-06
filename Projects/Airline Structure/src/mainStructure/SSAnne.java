@@ -9,8 +9,9 @@ package mainStructure;
 public class SSAnne extends Plane {
 	private static final Integer ANNE_ROWS = 6;
 	private static final Integer ANNE_COLUMNS = 2;
+	private static final boolean HAS_FIRST_CLASS = true;
 	
 	public SSAnne() {
-		super(ANNE_ROWS, ANNE_COLUMNS);
+		super(ANNE_ROWS, ANNE_COLUMNS,HAS_FIRST_CLASS);
 	}
 }
